@@ -1,10 +1,10 @@
 
-## react-hooks-contexts
+## from-react-context
 
-react-hooks-contexts is an alternative of context api for those who want to take advantages of react useState and useReducer as global state management hooks, and  improve React performance by preventing unnecessary re-renders from context api.
+from-react-context is an alternative of context api for those who want to take advantages of react useState and useReducer as global state management hooks, and  improve React performance by preventing unnecessary re-renders from context api.
 
 ## Features
-- based from built-in react hooks and no need to learn
+- based on built-in react hooks and no need to learn
 - Prevents the unnecessary re-renders
 - one context for multiple contexts
 
@@ -12,12 +12,12 @@ react-hooks-contexts is an alternative of context api for those who want to take
 Using npm:
 
 ```bash
-npm install react-hooks-contexts
+npm install from-react-context
 ```
 Using yarn:
 
 ```bash
-yarn add react-hooks-contexts
+yarn add from-react-context
 ```
 ## Usage
 ### Create a store
@@ -26,7 +26,7 @@ From the store.js file create an object that initialize all of your context valu
  
 const context={
     Theme: "light",
-    Counter:0
+    Count:0
 }
 
 export default context;
@@ -37,7 +37,7 @@ Import the context object from store.js file and pass it to the providers
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { Providers } from 'react-hooks-contexts';
+import { Providers } from 'from-react-context';
 import context from "./store"
 ReactDOM.render((
     <Providers context={context}>
@@ -47,7 +47,7 @@ ReactDOM.render((
 ```
 ### The useReducers hook
 ```js
-import {useReducers} from "react-hooks-contexts"
+import {useReducers} from "from-react-context"
     const reducer = (state, action) => {
         switch(action.type){
             case  "increment":
@@ -61,10 +61,10 @@ import {useReducers} from "react-hooks-contexts"
         }
     }
 function Counter(){
-        const [count,setCount]=useReducers(reducer,"Counter")
+        const [count,setCount]=useReducers(reducer,"Count")
 
         function increment(){
-            setCounter({type:"increment"})
+            setCount({type:"increment"})
         }
 
     return (
@@ -78,14 +78,14 @@ The second parameter in `useReducers` is the name of context that would be to up
 `useReducers` can also accept a third parameter as state initializer like react useReducer hook
 
 ```js
-useReducers(reducer,"Counter",state=>state+2)
+useReducers(reducer,"Count",state=>state*0)
 ```
 
 >Because of the context splitted up and return value wrapped in useMemo, the unnecessary re-renders is fixed. 
 
 ### The useStates hook
 ```js
-import {useStates} from "react-hooks-contexts"
+import {useStates} from "from-react-context"
 function Navbar(){
     //Pass The name of context as a parameter
         const [theme,setTheme]=useStates("Theme")
