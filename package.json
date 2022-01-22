@@ -1,7 +1,7 @@
 {
-  "name": "react-hooks-contexts",
+  "name": "from-react-context",
   "version": "1.0.1",
-  "description": "react-hooks-contexts is an alternative of context api for those who want to take advantages of react useState and useReducer as global state management hooks, and  improve React performance by preventing unnecessary re-renders from context api.",
+  "description": "from-react-context is an alternative of context api for those who want to take advantages of react useState and useReducer as global state management hooks, and  improve React performance by preventing unnecessary re-renders from context api.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "typings": "./src/index.d.ts",
@@ -43,14 +43,14 @@
     "typescript": "^4.5.3"
   },
   "homepage": {
-    "url": "https://github.com/adelpheRaime/react-hooks-contexts"
+    "url": "https://github.com/adelpheRaime/from-react-context"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/adelpheRaime/react-hooks-contexts.git"
+    "url": "https://github.com/adelpheRaime/from-react-context.git"
   },
   "bugs": {
-    "url": "https://github.com/adelpheRaime/react-hooks-contexts/issues"
+    "url": "https://github.com/adelpheRaime/from-react-context/issues"
   },
   "dependencies": {
     "@babel/runtime": "^7.16.7"
