@@ -1,6 +1,6 @@
 {
   "name": "from-react-context",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "from-react-context is an alternative of context api for those who want to take advantages of react useState and useReducer as global state management hooks, and  improve React performance by preventing unnecessary re-renders from context api.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

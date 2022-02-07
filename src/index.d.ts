@@ -40,7 +40,7 @@ interface contextKey{
     [key : string]:any
 }
 interface ProviderProps{
-    value: contextKey;
+    context: contextKey;
     children?: React.ReactNode | undefined;
 }
 export declare const Providers:React.FC<ProviderProps>;
